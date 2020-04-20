@@ -3,7 +3,7 @@ an easy backup-creator-script for Linux (= Debian x)
 
 # setUp
 
--> in order to configure your own configuration, you can edit backupCreator.sh
+<b>-> in order to configure your own configuration, you can edit backupCreator.sh</b>
 
 1st) create dir .backupService under "/"<br>
 2nd) copy backupCreator.sh to /.backupService/<br>
