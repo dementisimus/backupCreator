@@ -23,4 +23,4 @@ find $buDest -mtime +3 -type f -delete
 # executes automatic updates
 apt-get update -y && apt-get upgrade -y
 # shutdowns the system for a reboot
-shutdown -r 5
+systemctl reboot
