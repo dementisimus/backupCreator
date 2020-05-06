@@ -12,6 +12,10 @@ loDest="/.backupService/logs/"
 timestamp=$(date -d "today" +"%d.%m.%Y-%H,%M,%S")
 archive_file="$timestamp.zip"
 
+# removes backup logs and re-creates the file
+rm "/.backupService/logs/logs.log"
+touch "/.backupService/logs/logs.log"
+
 cd $buDest
 
 tar cvzf $buDest/$archive_file $loc_1 $loc_2 $loc_3 $loc_4
@@ -22,10 +26,6 @@ cd $buDest
 find $buDest -mtime +3 -type f -delete
 
 cd $loDest
-
-# removes backup logs and re-creates the file
-rm "/.backupService/logs/logs.log"
-touch "/.backupService/logs/logs.log"
 
 # executes automatic updates
 apt-get update -y && apt-get upgrade -y
